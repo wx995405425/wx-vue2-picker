@@ -1,6 +1,6 @@
 {
   "name": "wx-vue2-picker",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A compatible replacement for the mui pop picker component in IOS16.X",
   "main": "index.js",
   "author": "wx995405425",
