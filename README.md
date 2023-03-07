@@ -37,8 +37,8 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 #### How to use as mui
 1、import css and js in main.js
 ```
-import { PopPicker, DtPicker } from "wx-vue2-picker/dist/wx-vue2-picker.umd";
-import "wx-vue2-picker/dist/wx-vue2-picker.css";
+import 'wx-vue2-picker/lib/wx-vue2-picker.css';
+import { PopPicker, DtPicker } from 'wx-vue2-picker';
 ```
 
 2、Register the component globally in main.js
@@ -55,6 +55,10 @@ let options = [
   { value: 2, text: "James" },
   { value: 3, text: "Jim" },
 ]
+
+// Replace this.$PopPicker with mui.PopPicker
+// Replace this.$DtPicker with mui.DtPicker
+
 let picker = new this.$PopPicker({
   selectParam: value, // default value
 });
