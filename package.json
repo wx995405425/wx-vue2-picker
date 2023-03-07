@@ -2,16 +2,22 @@
   "name": "wx-vue2-picker",
   "version": "0.1.0",
   "description": "A compatible replacement for the mui pop picker component in IOS16.X",
+  "main": "index.js",
   "author": "wx995405425",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git@github.com:wx995405425/wx-vue2-picker.git"
   },
+  "keywords": [
+    "vue2",
+    "vue2-picker",
+    "wx-vue2-picker",
+    "vue2-scroll-picker"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build:lib": "vue-cli-service build --target lib --name wx-vue2-picker src/components/PopPicker/index.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -30,5 +36,9 @@
     "eslint-plugin-vue": "^6.2.2",
     "prettier": "^2.2.1",
     "vue-template-compiler": "^2.6.11"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/wx995405425/wx-vue2-picker/issues"
+  },
+  "homepage": "https://github.com/wx995405425/wx-vue2-picker#readme"
 }
