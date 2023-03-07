@@ -33,6 +33,14 @@ yarn lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
+### Installation
+```
+yarn add wx-vue2-picker
+```
+or
+```
+npm i wx-vue2-picker
+```
 ### Usage
 #### How to use as mui
 1、import css and js in main.js
