@@ -1,6 +1,6 @@
 import Vue from "vue";
 import App from "./App.vue";
-import { PopPicker, DtPicker } from "../index";
+import { PopPicker, DtPicker } from "../components";
 Vue.config.productionTip = false;
 Vue.prototype.$PopPicker = PopPicker;
 Vue.prototype.$DtPicker = DtPicker;

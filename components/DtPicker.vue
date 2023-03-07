@@ -374,10 +374,9 @@ export default {
       if (this.customData) {
         Object.keys(this.customData).forEach((key) => {
           if (!!this.customData[key] && this.customData[key] instanceof Array) {
-            obj[key] = this.customData[key].map((x) => ({
-              ...x,
-              name: x.text,
-            }));
+            obj[key] = this.customData[key].map((x) => {
+              return Object.assign({}, x, {name: x.text})
+            });
           }
         });
       }

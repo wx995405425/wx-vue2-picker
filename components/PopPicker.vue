@@ -161,7 +161,7 @@ export default {
       let temArr = [];
       for (let i = 0; i < arr.length; i++) {
         if (!!arr[i] && typeof arr[i] === "object") {
-          let item = { ...arr[i] };
+          let item = arr[i];
           // 用来兼容vue-scroll-picker组件
           item.value = item.value || item[this.valueKey];
           item.name = item.name || item[this.showKey];
@@ -185,11 +185,10 @@ export default {
           let copyArr = arr[i].map((item) => {
             // 用来兼容vue-scroll-picker组件
             if (!!item && typeof item === "object") {
-              return {
-                ...item,
+              return Object.assign({}, item, {
                 value: item.value || item[this.valueKey],
                 name: item.name || item[this.showKey],
-              };
+              });
             }
             return item;
           });
@@ -200,11 +199,10 @@ export default {
       return arr.map((item) => {
         // 用来兼容vue-scroll-picker组件
         if (!!item && typeof item === "object") {
-          return {
-            ...item,
+          return Object.assign({}, item, {
             value: item.value || item[this.valueKey],
             name: item.name || item[this.showKey],
-          };
+          });
         }
         return item;
       });
