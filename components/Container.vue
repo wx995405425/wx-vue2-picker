@@ -1,7 +1,7 @@
 <template>
   <div class="wx-vue2-picker-container" v-if="containerShow">
     <div class="mask"></div>
-    <div class="box" @click="clickMask">
+    <div class="box" @click.self.capture="clickMask">
       <transition name="picker-modal">
         <div class="bottom-wrap" v-if="modalShow">
           <slot></slot>
@@ -43,10 +43,12 @@ export default {
       this.clearTo();
       const me = this;
       if (newVal) {
-        this.containerShow = newVal;
         this.toModal = setTimeout(function () {
-          me.modalShow = true;
-        }, 50);
+          me.containerShow = newVal;
+          me.$nextTick(function () {
+            me.modalShow = true;
+          })
+        }, 350);
       } else {
         me.modalShow = false;
         me.toContainerHide = setTimeout(function () {
@@ -59,7 +61,9 @@ export default {
     this.clearTo();
   },
   methods: {
-    clickMask() {
+    clickMask(e) {
+      e.stopPropagation();
+      e.preventDefault();
       console.log("click mask");
       this.$emit("hide");
     },
